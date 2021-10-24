@@ -1,0 +1,448 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 1440px;
+  min-height: 900px;
+}
+body > header {
+  height: 50px;
+}
+body > header > nav {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body > header > nav > li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+}
+body > header > nav > li > a {
+  text-decoration: none;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #303030;
+}
+body main .container {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  max-width: 1440px;
+  min-height: 900px;
+  /*images for filter*/
+}
+body main .container > aside {
+  /*sidebar*/
+}
+body main .container > aside .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 50px;
+  margin-left: 165px;
+  margin-right: 15px;
+  /*filter date*/
+  /*time filter*/
+  /*camps filter*/
+  /*button section*/
+}
+body main .container > aside .sidebar .filter-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .container > aside .sidebar .filter-title #date, body main .container > aside .sidebar .filter-title #time, body main .container > aside .sidebar .filter-title #camp {
+  margin-left: 10px;
+  z-index: 15;
+  display: none;
+}
+body main .container > aside .sidebar .filter-title .hidden {
+  margin-left: -15px;
+  width: 19px;
+  height: 19px;
+  opacity: 0;
+  z-index: 20;
+  display: none;
+}
+body main .container > aside .sidebar .filter-title .arrow {
+  margin-left: -15px;
+  margin-top: -5px;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  display: none;
+}
+body main .container > aside .sidebar .filter-title .active {
+  opacity: 0 !important;
+}
+body main .container > aside .sidebar .filter-title h3 {
+  margin-bottom: 6px;
+  text-align: left;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #006058;
+}
+body main .container > aside .sidebar .datefilter {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 255px;
+  margin-bottom: 40px;
+}
+body main .container > aside .sidebar .datefilter .filter-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .container > aside .sidebar .datefilter .filter-title .arrow {
+  margin-left: 10px;
+  margin-top: -15px;
+  width: 15px;
+  height: 15px;
+}
+body main .container > aside .sidebar .datefilter .filter-title h3 {
+  margin-bottom: 18px;
+  text-align: left;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #006058;
+}
+body main .container > aside .sidebar .datefilter .d-f-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 255px;
+}
+body main .container > aside .sidebar .datefilter .d-f-item label {
+  position: relative;
+  display: flex;
+  width: 120px;
+  height: 60px;
+  justify-content: start;
+  align-items: center;
+  padding-left: 18px;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #303030;
+}
+body main .container > aside .sidebar .datefilter .d-f-item input {
+  margin-left: -14px;
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  padding-left: 47px;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #C0E8E4;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #8F8F8F;
+  z-index: -999;
+}
+body main .container > aside .sidebar .datefilter .d-f-item .warning {
+  border: 1px solid #E79BCE;
+}
+body main .container > aside .sidebar .timefilter {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 159px;
+  height: 175px;
+  margin-bottom: 40px;
+}
+body main .container > aside .sidebar .timefilter .filter-radio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .container > aside .sidebar .timefilter .filter-radio label {
+  display: flex;
+  align-items: center;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #303030;
+}
+body main .container > aside .sidebar .timefilter .filter-radio input {
+  width: 19px;
+  height: 19px;
+  align-items: center;
+  opacity: 0;
+  z-index: 10;
+}
+body main .container > aside .sidebar .timefilter .filter-radio .radio-square {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #FFFFFF;
+  border: 1px solid #C0E8E4;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+body main .container > aside .sidebar .timefilter .filter-radio .radio-square .square {
+  position: absolute;
+  margin: 2px;
+  width: 19px;
+  height: 19px;
+  background: #00B3A4;
+  border-radius: 2px;
+  opacity: 0;
+}
+body main .container > aside .sidebar .timefilter .filter-radio .radio-square .active {
+  opacity: 1;
+}
+body main .container > aside .sidebar .campfilter {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 149px;
+  height: 178px;
+  margin-bottom: 40px;
+}
+body main .container > aside .sidebar .campfilter .filter-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .container > aside .sidebar .campfilter .filter-title .arrow {
+  margin-left: 10px;
+  margin-top: -5px;
+  width: 15px;
+  height: 15px;
+}
+body main .container > aside .sidebar .campfilter .filter-title h3 {
+  margin-bottom: 6px;
+  text-align: left;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #006058;
+}
+body main .container > aside .sidebar .campfilter .camp-radio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .container > aside .sidebar .campfilter .camp-radio label {
+  display: flex;
+  align-items: center;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #303030;
+  margin-left: 8px;
+}
+body main .container > aside .sidebar .campfilter .camp-radio input {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  opacity: 0;
+  z-index: 10;
+}
+body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #FFFFFF;
+  border: 1px solid #C0E8E4;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square .square_img {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  width: 19px;
+  height: 19px;
+  border-radius: 2px;
+  opacity: 0;
+}
+body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square .active {
+  opacity: 1;
+}
+body main .container > aside .sidebar .blueBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 255px;
+  height: 60px;
+  background: #008a7e;
+  border: none;
+  border-radius: 20px;
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+body main .container > aside .sidebar .blueBtn:hover {
+  background: #05D6C4;
+}
+body main .container > aside .sidebar .blueBtn:active {
+  background: #008A7E;
+}
+body main .container > aside .sidebar .cancelBtn {
+  margin-top: 21px;
+  width: 255px;
+  height: 21px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main .container > aside .sidebar .cancelBtn > img {
+  width: 10px;
+  height: 10px;
+}
+body main .container > aside .sidebar .cancelBtn > a {
+  font-family: "PT Sans Caption", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #00B2A4;
+  margin-left: 10px;
+}
+body main .container > aside .sidebar .cancelBtn:hover a {
+  color: #01D4C3;
+}
+body main .container > article .postcards {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  max-width: 855px;
+  width: auto;
+  margin-top: 35px;
+}
+body main .container > article .postcards div {
+  margin: 15px;
+  display: flex;
+  width: 255px;
+  height: 350px;
+  background: #C4C4C4;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+@media (min-width: 541px) and (max-width: 900px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    max-width: 1440px;
+    min-height: 900px;
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 900px;
+    min-height: 900px;
+  }
+}
+@media (min-width: 541px) and (max-width: 900px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 50px auto;
+  }
+}
+@media (max-width: 540px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 50px auto;
+  }
+  .sidebar .filter-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .sidebar .filter-title #date, .sidebar .filter-title #time, .sidebar .filter-title #camp {
+    margin-left: 10px;
+    z-index: 15;
+    display: flex;
+  }
+  .sidebar .filter-title .hidden {
+    margin-left: -15px;
+    width: 19px;
+    height: 19px;
+    opacity: 0;
+    z-index: 20;
+    display: flex;
+  }
+  .sidebar .filter-title .arrow {
+    margin-left: -15px;
+    margin-top: -5px;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    display: flex;
+  }
+  .sidebar .filter-title .active {
+    opacity: 0 !important;
+  }
+  .sidebar .filter-title h3:nth-child(n+1) {
+    margin: 10px 0;
+  }
+  .sidebar .filter-title h3:nth-child(3) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .postcards {
+    max-width: 540px;
+    margin-top: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

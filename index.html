@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="src/scss/style.css">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a href="filter.html">Filter</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="">Image</a></li>
+
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <aside>
+                <div class="sidebar">
+
+                    <div class="filter-title">
+                        <h3>Даты</h3>
+                        <img id="date" class="arrow" src="src/imgFilterPostcard/arrow_down.svg" alt="">
+                        <img class="arrow" src="src/imgFilterPostcard/arrow_up.svg" alt="">
+                        <input type="checkbox" class="hidden" value="date">
+                    </div>
+
+
+                        <div class="datefilter">
+                            <div class="d-f-item">
+                                <label for="in">c
+                                    <input type="text" id="in"
+                                           placeholder="ДД:ММ" value="">
+                                </label>
+
+                                <label for="on">по
+                                    <input type="text" id="on"
+                                           placeholder="ДД:ММ" value="">
+                                </label>
+
+                            </div>
+                        </div>
+
+
+                    <div class="filter-title">
+                        <h3>Длительность</h3>
+                        <img id="time" class="arrow"  src="src/imgFilterPostcard/arrow_down.svg" alt="">
+                        <img class="arrow" src="src/imgFilterPostcard/arrow_up.svg" alt="">
+                        <input type="checkbox" class="hidden" value="time">
+                    </div>
+
+                     <div class="timefilter">
+                            <div class="filter-radio">
+                                <input type="radio" id="week1" value="week1" >
+                                <div class="radio-square">
+                                    <div class="square" ></div>
+                                </div>
+                                <label for="week1">До 1 недели</label>
+                            </div>
+                            <div class="filter-radio">
+                                <input type="radio" id="week2" value="week2" >
+                                <div class="radio-square">
+                                    <div class="square" ></div>
+                                </div>
+                                <label for="week2">До 2 недель</label>
+                            </div>
+                            <div class="filter-radio">
+                                <input type="radio" id="week3" value="week3" >
+                                <div class="radio-square">
+                                    <div class="square"
+                                    ></div>
+                                </div>
+                                <label for="week3">До 3 недель</label>
+                            </div>
+                            <div class="filter-radio">
+                                <input type="radio" id="week4" value="week4" >
+                                <div class="radio-square">
+                                    <div class="square"></div>
+                                </div>
+                                <label for="week4">До 4 недель</label>
+                            </div>
+
+                        </div>
+                    <div class="filter-title">
+                        <h3>Альплагерь</h3>
+                        <img id="camp" class="arrow" src="src/imgFilterPostcard/arrow_down.svg" alt="">
+                        <img class="arrow" src="src/imgFilterPostcard/arrow_up.svg" alt="">
+                        <input type="checkbox" class="hidden" value="camp">
+                    </div>
+
+                      <div class="campfilter">
+                            <div class="camp-radio">
+                                <input type="checkbox" id="camp1" value="camp1">
+                                <div class="checkbox-square">
+                                    <div class="square">
+                                        <img class="square_img" src="src/imgFilterPostcard/campfilter.svg" alt="">
+                                    </div>
+                                </div>
+                                <label for="camp1">Адыл-Су</label>
+                            </div>
+                            <div class="camp-radio">
+                                <input type="checkbox" id="camp2" value="camp2">
+                                <div class="checkbox-square">
+                                    <div class="square">
+                                        <img class="square_img" src="src/imgFilterPostcard/campfilter.svg" alt="">
+                                    </div>
+                                </div>
+                                <label for="camp2">Кязи</label>
+                            </div>
+                            <div class="camp-radio">
+                                <input type="checkbox" id="camp3" value="camp3">
+                                <div class="checkbox-square">
+                                    <div class="square">
+                                        <img class="square_img" src="src/imgFilterPostcard/campfilter.svg" alt="">
+                                    </div>
+                                </div>
+                                <label for="camp3">Дигория</label>
+                            </div>
+                            <div class="camp-radio">
+                                <input type="checkbox" id="camp4" value="camp4" >
+                                <div class="checkbox-square">
+                                    <div class="square">
+                                        <img class="square_img" src="src/imgFilterPostcard/campfilter.svg" alt="">
+                                    </div>
+                                </div>
+                                <label for="camp4">Джан-Туган</label>
+                            </div>
+                        </div>
+
+                    <input class="blueBtn" type="button" value="Применить">
+
+                    <div class="cancelBtn">
+                        <img src="src/imgFilterPostcard/cancelBtn.svg" alt="">
+                        <a href="#">Сбросить</a>
+                    </div>
+
+                </div>
+            </aside>
+            <article>
+                <div class="postcards">
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="filter.js"></script>
+    <script>
+        var filter = initFilterpage();
+        filter.init()
+    </script>
+
+</body>
+</html>
