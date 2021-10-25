@@ -41,32 +41,45 @@
                 this.container.innerHTML = htmlStr;
             },
             _hendleEvent() {
+                let arr = this.timeFilter.getElementsByClassName('square')
+                let reg = new RegExp("^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$", "i");
+                let dateArray =  this.dataFilter.getElementsByTagName('input');
+                let campArr = this.campFilter.getElementsByClassName('square_img')
 
                 this.dataFilter.addEventListener('input', event => {
-                    let reg = new RegExp("^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$", "i");
-                    let dateArray =  this.dataFilter.getElementsByTagName('input');
                     actionDateFilter(event, reg, dateArray, this.period)
                 })
 
                 this.timeFilter.addEventListener('click', event => {
-                    let arr = this.timeFilter.getElementsByClassName('square')
                     actionTimeFilter(event, this.weeks, arr)
                 })
 
                 this.campFilter.addEventListener('click', event => {
                     actionCampFilter(event,this.camps, this.campArray)
                 })
-                this.cancel.addEventListener('click', event => {
-                  this.actionCancel = true
-                })
-                this.use.addEventListener('click', event => {
 
+                this.cancel.addEventListener('click', () => {
+
+                  this.actionCancel = true
+                    changeStyle(arr, 0)
+                        this.campArray = [];
+                    changeStyle(campAr, 0)
+                        this.period = [];
+                        Object.values(dateArray).forEach( date => {
+                            date.style.border = '1px solid #C0E8E4';
+                            date.value = '';})
+                        })
+                this.use.addEventListener('click', event => {
                 })
             }
         }
     return filter
     }
-
+function changeStyle(arr, value) {
+    Object.values(arr).forEach( time =>{
+        time.style.opacity = value;
+    })
+}
     function actionTimeFilter(event, weeks, array) {
 
         weeks.forEach( week => {
@@ -80,11 +93,8 @@
                     }
                 })
             }
-            if(this.actionCancel){
-                event.target.id = ''
-            }
-            return event.target.id
         })
+        return event.target.id
     }
 
 
@@ -123,12 +133,6 @@
              } else event.target.style.border = '1px solid #E79BCE';
          }
      })
-     if(this.actionCancel){
-         period = [];
-         Object.values(dateArray).forEach( date => {
-             date.style.border = '1px solid #C0E8E4'
-             date.value = ''})
-     }
      return period
  }
 
