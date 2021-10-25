@@ -6,6 +6,9 @@
 body {
   max-width: 1440px;
   min-height: 900px;
+  /*text slider*/
+  /*slider*/
+  /*slider page*/
 }
 body > header {
   height: 50px;
@@ -368,6 +371,95 @@ body main .container > article .postcards div {
   border-radius: 15px;
   box-sizing: border-box;
 }
+body .text-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 540px;
+  width: 100%;
+  margin-left: 125px;
+  margin-top: 95px;
+}
+body .text-slider .left-title-slider {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+  margin-bottom: 45px;
+  display: block;
+}
+body .text-slider .text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  width: auto;
+}
+body .text-slider .price {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  margin-top: 69px;
+}
+body .text-slider .price span {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+body .text-slider .price .slider-btn {
+  width: 255px;
+  height: 49px;
+  background: #C4C4C4;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  margin-left: 60px;
+}
+body .text-slider .price .slider-btn:hover {
+  color: #888888;
+}
+body .text-slider .price .slider-btn:active {
+  background-color: #e9e7e7;
+}
+body .section {
+  display: flex;
+  margin-left: 165px;
+  margin-top: 95px;
+  max-height: 347px;
+}
+body .top-title-slider {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+  margin-bottom: 45px;
+  display: none;
+}
+body .clearfix {
+  clear: both;
+}
+body .slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 @media (min-width: 541px) and (max-width: 900px) {
   .container {
     display: flex;
@@ -376,43 +468,65 @@ body main .container > article .postcards div {
     max-width: 1440px;
     min-height: 900px;
   }
+  .container .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 50px auto;
+  }
+  .container .top-title-slider {
+    display: none !important;
+  }
+  .container .slider {
+    flex-direction: column !important;
+    justify-content: space-around !important;
+  }
+  .container .slider .section {
+    margin: 0 auto;
+  }
+  .container .slider .text-slider {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .container .slider .text-slider .left-title-slider {
+    display: none;
+  }
+  .container .slider .text-slider .text {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .container .slider .text-slider .price {
+    margin: 69px auto;
+    width: 80%;
+    justify-content: space-around;
+  }
+  .container .slider .text-slider .price .slider-btn {
+    margin: 0;
+  }
 }
 @media (max-width: 540px) {
   .container {
-    display: flex;
     flex-wrap: wrap;
-    width: auto;
-    max-width: 900px;
-    min-height: 900px;
+    width: auto !important;
+    justify-content: space-around !important;
   }
-}
-@media (min-width: 541px) and (max-width: 900px) {
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 50px auto;
+  .container .sidebar {
+    flex-direction: column !important;
+    justify-content: start !important;
+    margin: 50px auto !important;
   }
-}
-@media (max-width: 540px) {
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 50px auto;
-  }
-  .sidebar .filter-title {
+  .container .sidebar .filter-title {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
-  .sidebar .filter-title #date, .sidebar .filter-title #time, .sidebar .filter-title #camp {
+  .container .sidebar .filter-title #date, .container .sidebar .filter-title #time, .container .sidebar .filter-title #camp {
     margin-left: 10px;
     z-index: 15;
     display: flex;
   }
-  .sidebar .filter-title .hidden {
+  .container .sidebar .filter-title .hidden {
     margin-left: -15px;
     width: 19px;
     height: 19px;
@@ -420,7 +534,7 @@ body main .container > article .postcards div {
     z-index: 20;
     display: flex;
   }
-  .sidebar .filter-title .arrow {
+  .container .sidebar .filter-title .arrow {
     margin-left: -15px;
     margin-top: -5px;
     width: 15px;
@@ -428,20 +542,50 @@ body main .container > article .postcards div {
     opacity: 1;
     display: flex;
   }
-  .sidebar .filter-title .active {
+  .container .sidebar .filter-title .active {
     opacity: 0 !important;
   }
-  .sidebar .filter-title h3:nth-child(n+1) {
+  .container .sidebar .filter-title h3:nth-child(n+1) {
     margin: 10px 0;
   }
-  .sidebar .filter-title h3:nth-child(3) {
+  .container .sidebar .filter-title h3:nth-child(3) {
     margin-bottom: 20px;
   }
-}
-@media (max-width: 540px) {
-  .postcards {
-    max-width: 540px;
-    margin-top: 15px;
+  .container .postcards {
+    max-width: 540px !important;
+    margin-top: 15px !important;
+    justify-content: space-around !important;
+  }
+  .container .top-title-slider {
+    margin-top: 45px !important;
+    display: block !important;
+    margin: 25px auto;
+  }
+  .container .slider {
+    flex-direction: column !important;
+    justify-content: space-around !important;
+  }
+  .container .slider .section {
+    margin: 0 auto;
+  }
+  .container .slider .text-slider {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .container .slider .text-slider .left-title-slider {
+    display: none !important;
+  }
+  .container .slider .text-slider .text {
+    margin: 45px auto;
+    width: 80%;
+  }
+  .container .slider .text-slider .price {
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-around;
+  }
+  .container .slider .text-slider .price .slider-btn {
+    margin: 0;
   }
 }
 
