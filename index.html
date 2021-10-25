@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav>
-            <li><a href="filter.html">Filter</a></li>
+            <li><a href="index.html">Filter</a></li>
             <li><a href="slider.html">Slider</a></li>
             <li><a href="map.html">Map</a></li>
             <li><a href="">Image</a></li>
@@ -28,8 +28,8 @@
 
                     <div class="filter-title">
                         <h3>Даты</h3>
-                        <img id="date" class="arrow" src="src/imgFilterPostcard/arrow_down.svg" alt="">
-                        <img class="arrow" src="src/imgFilterPostcard/arrow_up.svg" alt="">
+                        <img id="date" class="arrow active" src="src/imgFilterPostcard/arrow_down.svg" alt="">
+                        <img class="arrow " src="src/imgFilterPostcard/arrow_up.svg" alt="">
                         <input type="checkbox" class="hidden" value="date">
                     </div>
 
@@ -51,7 +51,7 @@
 
                     <div class="filter-title">
                         <h3>Длительность</h3>
-                        <img id="time" class="arrow"  src="src/imgFilterPostcard/arrow_down.svg" alt="">
+                        <img id="time" class="arrow active"  src="src/imgFilterPostcard/arrow_down.svg" alt="">
                         <img class="arrow" src="src/imgFilterPostcard/arrow_up.svg" alt="">
                         <input type="checkbox" class="hidden" value="time">
                     </div>
@@ -90,8 +90,8 @@
                         </div>
                     <div class="filter-title">
                         <h3>Альплагерь</h3>
-                        <img id="camp" class="arrow" src="src/imgFilterPostcard/arrow_down.svg" alt="">
-                        <img class="arrow" src="src/imgFilterPostcard/arrow_up.svg" alt="">
+                        <img id="camp" class="arrow active" src="src/imgFilterPostcard/arrow_down.svg" alt="">
+                        <img class="arrow "  src="src/imgFilterPostcard/arrow_up.svg" alt="">
                         <input type="checkbox" class="hidden" value="camp">
                     </div>
 
@@ -151,6 +151,7 @@
     </main>
 
     <footer></footer>
+    <script src="openSidebar.js"></script>
     <script src="filter.js"></script>
     <script>
         var filter = initFilterpage();
