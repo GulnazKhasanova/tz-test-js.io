@@ -1,6 +1,4 @@
 
-
-
     function initFilterpage(){
 
         const filter = {
@@ -20,19 +18,16 @@
 
             init() {
                 this.container = document.querySelector('.postcards');
-                console.log(this.container)
                 this.dataFilter = document.querySelector('.datefilter');
-                console.log(this.dataFilter)
                 this.timeFilter = document.querySelector('.timefilter');
-                console.log(this.timeFilter)
                 this.campFilter = document.querySelector('.campfilter');
-                console.log(this.campFilter)
                 this.items = getFilterElem(this.allItems);
                 this.use = document.querySelector('.blueBtn');
                 this.cancel = document.querySelector('.cancelBtn');
                 this._render();
                 this._hendleEvent();
             },
+            /*render Postcards*/
             _render() {
                 let htmlStr =''
                 this.items.forEach((item,i) => {
@@ -40,6 +35,7 @@
                 })
                 this.container.innerHTML = htmlStr;
             },
+            /*click handling*/
             _hendleEvent() {
                 let arr = this.timeFilter.getElementsByClassName('square')
                 let reg = new RegExp("^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$", "i");
@@ -59,17 +55,11 @@
                 })
 
                 this.cancel.addEventListener('click', () => {
+                    clickCancel(dateArray, arr, campArr)
+                    })
 
-                  this.actionCancel = true
-                    changeStyle(arr, 0)
-                        this.campArray = [];
-                    changeStyle(campAr, 0)
-                        this.period = [];
-                        Object.values(dateArray).forEach( date => {
-                            date.style.border = '1px solid #C0E8E4';
-                            date.value = '';})
-                        })
                 this.use.addEventListener('click', event => {
+                    /*filtering logic*/
                 })
             }
         }
@@ -80,6 +70,18 @@ function changeStyle(arr, value) {
         time.style.opacity = value;
     })
 }
+/*click handling cancels button*/
+function clickCancel(dateArray, arr, campArr){
+    this.actionCancel = true
+    changeStyle(arr, 0)
+    this.campArray = [];
+    changeStyle(campArr, 0)
+    this.period = [];
+    Object.values(dateArray).forEach( date => {
+        date.style.border = '1px solid #C0E8E4';
+        date.value = '';})
+}
+/*Time filter click handling*/
     function actionTimeFilter(event, weeks, array) {
 
         weeks.forEach( week => {
@@ -96,8 +98,7 @@ function changeStyle(arr, value) {
         })
         return event.target.id
     }
-
-
+ /*Camp filter click handling*/
  function actionCampFilter(event, camps, campArray) {
 
      camps.forEach( camp =>{
@@ -113,16 +114,9 @@ function changeStyle(arr, value) {
              campArray.splice(index,1);}
          }
      })
-     if(this.actionCancel){
-         campArray = [];
-         let activeCamp  = this.campFilter.getElementsByClassName('.square_img')
-         Object.values(activeCamp).forEach(item => {
-             item.style.opacity = 0;
-         })
-     }
      return campArray
  }
-
+/*Date filter click handling*/
  function actionDateFilter(event, reg, dateArray, period) {
      Object.values(dateArray).forEach( date => {
          if(event.target.id == date.id){
@@ -135,7 +129,7 @@ function changeStyle(arr, value) {
      })
      return period
  }
-
+/*creating an array for rendering*/
     function getFilterElem(allItems) {
         arr = [];
         for (let i = 0; i < allItems.length; i++) {
@@ -143,7 +137,7 @@ function changeStyle(arr, value) {
         }
         return arr;
     }
-
+/*rendering*/
     function renderTemplateItem(item, i){
         return `<div>
                         <img src="" alt="">
