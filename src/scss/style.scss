@@ -6,14 +6,14 @@
 body {
   max-width: 1440px;
   min-height: 900px;
-  > header {
+   header {
      height: 50px;
-    > nav {
+   nav {
       width: auto;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      > li {
+      li {
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -21,7 +21,7 @@ body {
         width: 200px;
         height: 50px;
         align-items: center;
-        > a{
+        a{
           text-decoration: none;
           font-family: $base-ff;
           font-size: 20px;
@@ -41,9 +41,9 @@ body {
       min-height: 900px;
 
 
-    > aside {
+       aside {
       /*sidebar*/
-      .sidebar{
+         .sidebar{
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -51,12 +51,12 @@ body {
         margin-left: 165px;
         margin-right: 15px;
 
-        .filter-title {
+           .filter-title {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-          #date,#time,#camp{
+             #date,#time,#camp{
             margin-left: 10px;
             z-index: 15;
             display: none;
@@ -486,6 +486,25 @@ body {
     .ymaps-2-1-79-inner-panes{
     border-radius: 50px!important;
   }
+  }
+  .fone{
+    width: 1913px;
+    height: 850px;
+    background: url("../img/ellipse.png") no-repeat,
+    url("../img/foneshadow.png") no-repeat,
+    url("../img/fone.png") no-repeat;
+    .animate{
+      position: relative;
+      margin-left: -19px;
+      margin-top: -8px;
+      z-index: 15;
+      width: 1309.68px;
+      height: 865.79px;
+      -webkit-animation: mymove 5s infinite;
+    }
+    @-webkit-keyframes mymove {
+      50% {opacity: 0;}
+    }
   }
 
   footer {}

@@ -10,16 +10,16 @@ body {
   /*slider*/
   /*slider page*/
 }
-body > header {
+body header {
   height: 50px;
 }
-body > header > nav {
+body header nav {
   width: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-body > header > nav > li {
+body header nav li {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -28,7 +28,7 @@ body > header > nav > li {
   height: 50px;
   align-items: center;
 }
-body > header > nav > li > a {
+body header nav li a {
   text-decoration: none;
   font-family: "PT Sans Caption", sans-serif;
   font-size: 20px;
@@ -43,10 +43,10 @@ body main .container {
   min-height: 900px;
   /*images for filter*/
 }
-body main .container > aside {
+body main .container aside {
   /*sidebar*/
 }
-body main .container > aside .sidebar {
+body main .container aside .sidebar {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -58,18 +58,18 @@ body main .container > aside .sidebar {
   /*camps filter*/
   /*button section*/
 }
-body main .container > aside .sidebar .filter-title {
+body main .container aside .sidebar .filter-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-body main .container > aside .sidebar .filter-title #date, body main .container > aside .sidebar .filter-title #time, body main .container > aside .sidebar .filter-title #camp {
+body main .container aside .sidebar .filter-title #date, body main .container aside .sidebar .filter-title #time, body main .container aside .sidebar .filter-title #camp {
   margin-left: 10px;
   z-index: 15;
   display: none;
 }
-body main .container > aside .sidebar .filter-title .hidden {
+body main .container aside .sidebar .filter-title .hidden {
   margin-left: -15px;
   width: 19px;
   height: 19px;
@@ -77,7 +77,7 @@ body main .container > aside .sidebar .filter-title .hidden {
   z-index: 20;
   display: none;
 }
-body main .container > aside .sidebar .filter-title .arrow {
+body main .container aside .sidebar .filter-title .arrow {
   margin-left: -15px;
   margin-top: -5px;
   width: 15px;
@@ -85,10 +85,10 @@ body main .container > aside .sidebar .filter-title .arrow {
   opacity: 1;
   display: none;
 }
-body main .container > aside .sidebar .filter-title .active {
+body main .container aside .sidebar .filter-title .active {
   opacity: 0 !important;
 }
-body main .container > aside .sidebar .filter-title h3 {
+body main .container aside .sidebar .filter-title h3 {
   margin-bottom: 6px;
   text-align: left;
   font-family: "PT Sans Caption", sans-serif;
@@ -98,7 +98,7 @@ body main .container > aside .sidebar .filter-title h3 {
   line-height: 26px;
   color: #006058;
 }
-body main .container > aside .sidebar .datefilter {
+body main .container aside .sidebar .datefilter {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
@@ -106,19 +106,19 @@ body main .container > aside .sidebar .datefilter {
   width: 255px;
   margin-bottom: 40px;
 }
-body main .container > aside .sidebar .datefilter .filter-title {
+body main .container aside .sidebar .datefilter .filter-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-body main .container > aside .sidebar .datefilter .filter-title .arrow {
+body main .container aside .sidebar .datefilter .filter-title .arrow {
   margin-left: 10px;
   margin-top: -15px;
   width: 15px;
   height: 15px;
 }
-body main .container > aside .sidebar .datefilter .filter-title h3 {
+body main .container aside .sidebar .datefilter .filter-title h3 {
   margin-bottom: 18px;
   text-align: left;
   font-family: "PT Sans Caption", sans-serif;
@@ -128,13 +128,13 @@ body main .container > aside .sidebar .datefilter .filter-title h3 {
   line-height: 26px;
   color: #006058;
 }
-body main .container > aside .sidebar .datefilter .d-f-item {
+body main .container aside .sidebar .datefilter .d-f-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 255px;
 }
-body main .container > aside .sidebar .datefilter .d-f-item label {
+body main .container aside .sidebar .datefilter .d-f-item label {
   position: relative;
   display: flex;
   width: 120px;
@@ -149,7 +149,7 @@ body main .container > aside .sidebar .datefilter .d-f-item label {
   line-height: 21px;
   color: #303030;
 }
-body main .container > aside .sidebar .datefilter .d-f-item input {
+body main .container aside .sidebar .datefilter .d-f-item input {
   margin-left: -14px;
   position: absolute;
   width: 120px;
@@ -168,10 +168,10 @@ body main .container > aside .sidebar .datefilter .d-f-item input {
   color: #8F8F8F;
   z-index: -999;
 }
-body main .container > aside .sidebar .datefilter .d-f-item .warning {
+body main .container aside .sidebar .datefilter .d-f-item .warning {
   border: 1px solid #E79BCE;
 }
-body main .container > aside .sidebar .timefilter {
+body main .container aside .sidebar .timefilter {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
@@ -180,14 +180,14 @@ body main .container > aside .sidebar .timefilter {
   height: 175px;
   margin-bottom: 40px;
 }
-body main .container > aside .sidebar .timefilter .filter-radio {
+body main .container aside .sidebar .timefilter .filter-radio {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-body main .container > aside .sidebar .timefilter .filter-radio label {
+body main .container aside .sidebar .timefilter .filter-radio label {
   display: flex;
   align-items: center;
   font-family: "PT Sans Caption", sans-serif;
@@ -197,14 +197,14 @@ body main .container > aside .sidebar .timefilter .filter-radio label {
   line-height: 26px;
   color: #303030;
 }
-body main .container > aside .sidebar .timefilter .filter-radio input {
+body main .container aside .sidebar .timefilter .filter-radio input {
   width: 19px;
   height: 19px;
   align-items: center;
   opacity: 0;
   z-index: 10;
 }
-body main .container > aside .sidebar .timefilter .filter-radio .radio-square {
+body main .container aside .sidebar .timefilter .filter-radio .radio-square {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -213,7 +213,7 @@ body main .container > aside .sidebar .timefilter .filter-radio .radio-square {
   box-sizing: border-box;
   border-radius: 3px;
 }
-body main .container > aside .sidebar .timefilter .filter-radio .radio-square .square {
+body main .container aside .sidebar .timefilter .filter-radio .radio-square .square {
   position: absolute;
   margin: 2px;
   width: 19px;
@@ -222,10 +222,10 @@ body main .container > aside .sidebar .timefilter .filter-radio .radio-square .s
   border-radius: 2px;
   opacity: 0;
 }
-body main .container > aside .sidebar .timefilter .filter-radio .radio-square .active {
+body main .container aside .sidebar .timefilter .filter-radio .radio-square .active {
   opacity: 1;
 }
-body main .container > aside .sidebar .campfilter {
+body main .container aside .sidebar .campfilter {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
@@ -234,13 +234,13 @@ body main .container > aside .sidebar .campfilter {
   height: 178px;
   margin-bottom: 40px;
 }
-body main .container > aside .sidebar .campfilter .filter-title {
+body main .container aside .sidebar .campfilter .filter-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-body main .container > aside .sidebar .campfilter .filter-title h3 {
+body main .container aside .sidebar .campfilter .filter-title h3 {
   margin-bottom: 6px;
   text-align: left;
   font-family: "PT Sans Caption", sans-serif;
@@ -250,14 +250,14 @@ body main .container > aside .sidebar .campfilter .filter-title h3 {
   line-height: 26px;
   color: #006058;
 }
-body main .container > aside .sidebar .campfilter .camp-radio {
+body main .container aside .sidebar .campfilter .camp-radio {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-body main .container > aside .sidebar .campfilter .camp-radio label {
+body main .container aside .sidebar .campfilter .camp-radio label {
   display: flex;
   align-items: center;
   font-family: "PT Sans Caption", sans-serif;
@@ -268,14 +268,14 @@ body main .container > aside .sidebar .campfilter .camp-radio label {
   color: #303030;
   margin-left: 8px;
 }
-body main .container > aside .sidebar .campfilter .camp-radio input {
+body main .container aside .sidebar .campfilter .camp-radio input {
   width: 25px;
   height: 25px;
   align-items: center;
   opacity: 0;
   z-index: 10;
 }
-body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square {
+body main .container aside .sidebar .campfilter .camp-radio .checkbox-square {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -284,7 +284,7 @@ body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square {
   box-sizing: border-box;
   border-radius: 3px;
 }
-body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square .square_img {
+body main .container aside .sidebar .campfilter .camp-radio .checkbox-square .square_img {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -294,10 +294,10 @@ body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square .
   border-radius: 2px;
   opacity: 0;
 }
-body main .container > aside .sidebar .campfilter .camp-radio .checkbox-square .active {
+body main .container aside .sidebar .campfilter .camp-radio .checkbox-square .active {
   opacity: 1;
 }
-body main .container > aside .sidebar .blueBtn {
+body main .container aside .sidebar .blueBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,13 +314,13 @@ body main .container > aside .sidebar .blueBtn {
   color: #FFFFFF;
   cursor: pointer;
 }
-body main .container > aside .sidebar .blueBtn:hover {
+body main .container aside .sidebar .blueBtn:hover {
   background: #05D6C4;
 }
-body main .container > aside .sidebar .blueBtn:active {
+body main .container aside .sidebar .blueBtn:active {
   background: #008A7E;
 }
-body main .container > aside .sidebar .cancelBtn {
+body main .container aside .sidebar .cancelBtn {
   margin-top: 21px;
   width: 255px;
   height: 21px;
@@ -329,11 +329,11 @@ body main .container > aside .sidebar .cancelBtn {
   justify-content: center;
   align-items: center;
 }
-body main .container > aside .sidebar .cancelBtn > img {
+body main .container aside .sidebar .cancelBtn > img {
   width: 10px;
   height: 10px;
 }
-body main .container > aside .sidebar .cancelBtn > a {
+body main .container aside .sidebar .cancelBtn > a {
   font-family: "PT Sans Caption", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -343,7 +343,7 @@ body main .container > aside .sidebar .cancelBtn > a {
   color: #00B2A4;
   margin-left: 10px;
 }
-body main .container > aside .sidebar .cancelBtn:hover a {
+body main .container aside .sidebar .cancelBtn:hover a {
   color: #01D4C3;
 }
 body main .container > article .postcards {
@@ -466,6 +466,25 @@ body #map {
 }
 body #map .ymaps-2-1-79-inner-panes {
   border-radius: 50px !important;
+}
+body .fone {
+  width: 1913px;
+  height: 850px;
+  background: url("../img/ellipse.png") no-repeat, url("../img/foneshadow.png") no-repeat, url("../img/fone.png") no-repeat;
+}
+body .fone .animate {
+  position: relative;
+  margin-left: -19px;
+  margin-top: -8px;
+  z-index: 15;
+  width: 1309.68px;
+  height: 865.79px;
+  -webkit-animation: mymove 5s infinite;
+}
+@-webkit-keyframes mymove {
+  50% {
+    opacity: 0;
+  }
 }
 @media (min-width: 541px) and (max-width: 900px) {
   .container {
